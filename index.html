@@ -12,33 +12,191 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>    
         
+/* ==========================================================================
+   Global Variables
+   ========================================================================== */
 :root {
- --primary-color: #003366;
---secondary-color: #0066cc;
---accent-color: #ffcc00;
- }
-        body {
- text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent-color);
-            padding-left: 5px;
-        }
-        .animate-on-scroll {
-            opacity: 0;
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s forwards;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    --accent-color: #ffcc00;
+    --primary-color: #003366;
+    --secondary-color: #0066cc;
+}
 
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Navigation Styles
+   ========================================================================== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    background-color: var(--accent-color);
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.8)), 
+                url('images/college-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 120px 0;
+}
+
+/* ==========================================================================
+   Component Styles
+   ========================================================================== */
+.course-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.feature-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.notice-board {
+    border-left: 4px solid var(--accent-color);
+}
+
+.notice-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.notice-item:hover {
+    background-color: #f9f9f9;
+    padding-left: 20px;
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+/* ==========================================================================
+   Animation Styles
+   ========================================================================== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in {
+    -webkit-animation: fadeIn 1s forwards;
+    -moz-animation: fadeIn 1s forwards;
+    animation: fadeIn 1s forwards;
+}
+
+/* ==========================================================================
+   Keyframes
+   ========================================================================== */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
