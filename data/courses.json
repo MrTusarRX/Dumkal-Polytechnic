@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Computer Science and Technology",
+        "description": "Comprehensive program covering software development and IT infrastructure",
+        "prospects": [
+            "Software Developer",
+            "IT Support Engineer",
+            "Network Engineer",
+            "Database Engineer",
+            "In Govt. Sector: Indian Railways, DRDO, ISRO, ONGC"
+        ]
+    },
+    {
+        "name": "Electrical Engineering",
+        "description": "Focus on electrical systems design and implementation",
+        "prospects": [
+            "Electrical Design Engineer",
+            "CAD Engineer",
+            "Technical Trainer",
+            "In Govt. Sector: Indian Railways, DRDO, ISRO, SAIL"
+        ]
+    }
+]
