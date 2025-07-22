@@ -10,13 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        :root {
-            --primary-color: #003366;
-            --secondary-color: #0066cc;
-            --accent-color: #ffcc00;
-        }
-        
+    <style>     
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
@@ -370,10 +364,7 @@
     
     <!-- JSON Data Loading and Animations -->
     <script>
-        // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Load data from JSON files
         Promise.all([
             fetch('data/notices.json').then(res => res.json()),
             fetch('data/courses.json').then(res => res.json()),
@@ -388,8 +379,6 @@
                     <small class="text-muted">${notice.date}</small>
                 </div>
             `).join('');
-            
-            // Render courses
             const coursesContainer = document.getElementById('courses-container');
             coursesContainer.innerHTML = courses.map(course => `
                 <div class="col-md-6">
